@@ -1,11 +1,15 @@
 import React from 'react';
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
+import { css, useTheme } from '@emotion/react';
+// import { useTheme } from 'emotion-theming'
+
+const primaryColor = props => css`
+  color: ${props.colors.primary}
+`
 
 function App() {
   return (
-    <div css={{width: 200,height: 200, background: 'red'}}>react work!</div>
+   console.log(useTheme()),
+  <div css={primaryColor}>defe</div>
   );
 }
 
